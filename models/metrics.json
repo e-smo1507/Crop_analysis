@@ -1,0 +1,82 @@
+{
+  "cleaning": [
+    [
+      "Raw records",
+      345407
+    ],
+    [
+      "After removing rows with missing values",
+      340414
+    ],
+    [
+      "After keeping records measured in tonnes",
+      326999
+    ],
+    [
+      "After removing duplicates",
+      326999
+    ],
+    [
+      "After removing zero area or zero production",
+      326009
+    ],
+    [
+      "After removing yield above the 99th percentile",
+      322751
+    ],
+    [
+      "After removing incomplete years [2020]",
+      322437
+    ]
+  ],
+  "rows": 322437,
+  "sklearn": "1.8.0",
+  "trained_on": "2026-10-22",
+  "models": {
+    "full": {
+      "decision_tree": {
+        "r2": 0.9842926088189694,
+        "rmse": 1.104507397296908,
+        "mae": 0.17463534775750564
+      },
+      "random_forest": {
+        "r2": 0.9856068178522162,
+        "rmse": 1.0572921549161425,
+        "mae": 0.26651153294858476
+      }
+    },
+    "forecast": {
+      "decision_tree": {
+        "r2": 0.9178677453442354,
+        "rmse": 2.5256517731095385,
+        "mae": 0.6681376419930815
+      },
+      "random_forest": {
+        "r2": 0.9249626360193521,
+        "rmse": 2.414100708929776,
+        "mae": 0.844564011049909
+      }
+    }
+  },
+  "importance": {
+    "full": {
+      "State": 0.020417088602949572,
+      "District": 0.0014371462374399924,
+      "Crop": 0.26223269694265144,
+      "Year": 0.00329825975891768,
+      "Season": 0.11817860112376055,
+      "Area": 0.24909228742490075,
+      "Production": 0.34534391990937996
+    },
+    "forecast": {
+      "State": 0.1329701810513014,
+      "District": 0.006753855669137604,
+      "Crop": 0.6778198146893627,
+      "Year": 0.02043586719762045,
+      "Season": 0.12336738714449601,
+      "Area": 0.038652894248081854
+    }
+  },
+  "train_rows": 257949,
+  "test_rows": 64488
+}
